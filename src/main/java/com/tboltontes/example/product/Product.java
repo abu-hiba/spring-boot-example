@@ -1,10 +1,15 @@
 package com.tboltontes.example.product;
 
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 import java.net.URL;
 import java.util.Currency;
 
+@Entity
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private Currency currency;
